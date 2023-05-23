@@ -19,11 +19,13 @@ let pokemonList = [
 const heightThreshold = 1.6; // Set the height threshold for special Pokémon
 
 for (let i = 0; i < pokemonList.length; i++) {
-  let pokemon = pokemonList[i];
-  let pokemonInfo = pokemon.name + " (height: " + pokemon.height + ")";
-if (pokemon.height > heightThreshold) {
-    pokemonInfo += " - Wow, that's big!";
+  if (pokemonList[i].height >= 1.6) {
+    document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ") - Wow, that's big!");
+  } else if (pokemonList[i].height < 1.6 && pokemonList[i].height >= 1.0) {
+    document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ") - This is an average size.");
+  } else {
+    document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ") - This is very small!");
   }
-  document.write(pokemonInfo + "<br>");
+  document.write("<br>");
 }
-
+}
