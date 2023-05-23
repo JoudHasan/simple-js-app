@@ -1,22 +1,22 @@
 let pokemonList = [
   {
     name: "Bulbasaur",
-    height: 7,
+    height: 0.7,
     types: ["grass", "poison"]
   },
   {
-    name: "Charmander",
-    height: 6,
+    name: "Charizard",
+    height: 1.7,
     types: ["fire"]
   },
   {
     name: "Squirtle",
-    height: 5,
+    height: 1,
     types: ["water"]
   }
 ];
 
-const heightThreshold = 6; // Set the height threshold for special Pokémon
+const heightThreshold = 1.0; // Set the height threshold for special Pokémon
 
 for (let i = 0; i < pokemonList.length; i++) {
   let pokemon = pokemonList[i];
