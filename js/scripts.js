@@ -16,8 +16,6 @@ let pokemonList = [
   }
 ];
 
-const heightThreshold = 1.6; // Set the height threshold for special Pokémon
-
 for (let i = 0; i < pokemonList.length; i++) {
   if (pokemonList[i].height >= 1.6) {
     document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ") - Wow, that's big!");
