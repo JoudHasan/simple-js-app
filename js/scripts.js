@@ -15,3 +15,10 @@ let pokemonList = [
     types: ["water"]
   }
 ];
+
+for (let i = 0; i < pokemonList.length; i++) {
+  let pokemon = pokemonList[i];
+  let pokemonInfo = pokemon.name + " (height: " + pokemon.height + ")";
+  document.write(pokemonInfo + "<br>");
+}
+
