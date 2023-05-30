@@ -33,7 +33,7 @@ const pokemonRepository = (function() {
 
 pokemonRepository.getAll().forEach(function(pokemon) {
   if (pokemon.height >= 1.6) {
-    document.write(pokemon.name + " (height: " + pokemon.height + ") - Wow, that's big!");
+    document.write(pokemon.name + " (height: " + pokemon.height + ") - that's big!");
   } else if (pokemon.height < 1.6 && pokemon.height >= 1.0) {
     document.write(pokemon.name + " (height: " + pokemon.height + ") - This is an average size.");
   } else {
