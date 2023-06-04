@@ -31,7 +31,7 @@ const pokemonRepository = (function() {
   };
 })();
 
-ffunction addListItem(pokemon) {
+function addListItem(pokemon) {
     let pokemonListContainer = document.querySelector('.pokemon-list');
     let listItem = document.createElement('li');
     let  button = document.createElement('button');
