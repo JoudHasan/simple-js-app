@@ -31,6 +31,34 @@ const pokemonRepository = (function() {
   };
 })();
 
+function addListItem(pokemon)  {
+  let pokemonListContainer = document.querySelector('.pokemon-list');
+   let listItem = document.createElement('li');
+    let button = document.createElement('button');
+    button.innerText = pokemon.name;
+    button.classList.add('pokemon-button');
+    listItem.appendChild(button);
+    pokemonListContainer.appendChild(listItem);
+    button.addEventListener('click', function() {
+      showDetails(pokemon);
+    });
+  }
+  
+function showDetails(pokemon) {
+    console.log(pokemon);
+  }
+
+ return {
+    getAll: getAll,
+    add: add
+  };
+})();
+
+// Create the container element
+let pokemonListContainer = document.createElement('div');
+pokemonListContainer.classList.add('pokemon-list');
+document.body.appendChild(pokemonListContainer);
+  
 pokemonRepository.getAll().forEach(function(pokemon) {
   if (pokemon.height >= 1.6) {
     document.write(pokemon.name + " (height: " + pokemon.height + ") - that's big!");
@@ -42,7 +70,7 @@ pokemonRepository.getAll().forEach(function(pokemon) {
   document.write("<br>");
 });
 
-// Example usage of add() function
+// usage of add() function
 pokemonRepository.add({
   name: "Squirtle",
   height: 1.5,
