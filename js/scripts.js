@@ -25,11 +25,6 @@ const pokemonRepository = (function() {
     pokemonList.push(item);
   }
 
-  return {
-    getAll: getAll,
-    add: add
-  };
-})();
 
 function addListItem(pokemon) {
     let pokemonListContainer = document.querySelector('.pokemon-list');
