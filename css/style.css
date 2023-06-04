@@ -1,1 +1,26 @@
+/* CSS for the Pokémon list */
+.pokemon-list {
+  list-style: none;
+  padding: 0;
+}
 
+/* CSS for the Pokémon buttons */
+.pokemon-list li button.pokemon-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #f44336 !important;
+  color: #fff !important;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pokemon-list li button.pokemon-button:hover {
+  background-color: #d32f2f !important;
+}
+
+.pokemon-list li button.pokemon-button:focus {
+  outline: none;
+}
