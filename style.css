@@ -1,10 +1,10 @@
-/* CSS for the Pokémon list */
+/*  for the Pokémon list */
 .pokemon-list {
   list-style: none;
   padding: 0;
 }
 
-/* CSS for the Pokémon buttons */
+/* for the Pokémon buttons */
 .pokemon-list li button.pokemon-button {
   display: inline-block;
   padding: 10px 20px;
