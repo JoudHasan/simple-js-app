@@ -28,15 +28,26 @@
       // Call the separate function to add the event listener
       button.addEventListener("click", function(event) {
       showDetails(pokemon);
+     closeButtonElement.addEventListener('click', hideModal);
       });
     }
 
-    /*function addClickListener(button, pokemon) {
-      button.addEventListener("click", function () {
-        showDetails(pokemon);
-      });
-    }*/
+   window.addEventListener('keydown',(e)=> {
+  let modalContainer = document.querySelector ('modal-container')
+ if (e.key === "Escape" && modalContainer.classList.contains('is-visible')) {
+hideModal();
+   }
+ });
 
+    let modalContainer = document.querySelector('.modal-container');
+modalContainer.addEventListener('click', (e) => {
+  let target = e.target;
+  if (target === modalContainer) {
+    hideModal();
+  }
+});
+
+      
     function loadList() {
     showLoadingMessage(); // Display loading message
       return fetch(apiUrl)
@@ -77,8 +88,26 @@
 
     function showDetails(item) {
     pokemonRepository.loadDetails(item).then(function(){
-      console.log(item);
+   let modalContainer = document.querySelector('.modal-container');
+    modalContainer.innerText="";
+    let modal = document.createElement('div');
+    modal.classList.add('modal');
+    let closeButtonElement = document.createElement ('button');
+    closeButtonElement.classList.add('modal-close');
+   closeButtonElement.innerText = 'close';
+    let titleElement = document.createElement('h1');
+    titleElement.innerText = item.name;
+    let contentElement = document.createElement('p');
+    contentElement.innerText='text';
+    modal.appendChild(closeButtonElement);
+   modal.appendChild(titleElement);
+    modalContainer.appendChild(modal);
     });
+  }
+
+    function hideModal () {
+let modalContainer = document.querySelector('.modal-container');
+modalContainer.classList.remove('is-visible')
   }
 
  function showLoadingMessage() {
@@ -120,7 +149,7 @@
     pokemonRepository.getAll().forEach(function (pokemon) {
       pokemonRepository.addListItem(pokemon);
     });
-  });
+  })();
 
 
 
