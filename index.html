@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
- <link rel="stylesheet" type="text/css" href="css/style.css">
-   
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-    <h1>Pokedex</h1> 
-    <p>list of some Pokemon</p>
-    <ul class=pokemon-list></ul>
+    <h1>Pokedex</h1>
+    <p>List of some Pokemon</p>
+    <ul class="pokemon-list"></ul>
     <strong>
-<div id='modal-container'>
-
-
-</div>
-    <script src="js/promise-polyfill.js"> </script>
-   <script src="js/fetch-polyfill.js"> </script>
-    <script src="js/scripts.js"></script> 
+        <div id="modal-container">
+            <button id="show-modal">Squirtle</button>
+            <div class="modal">
+                <button class="modal-close">Close</button>
+                <h2>Squirtle</h2>
+   <img id="pokemon-image" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="Pokemon Image">
+            </div>
+        </div>
     </strong>
+    <script src="js/promise-polyfill.js"></script>
+    <script src="js/fetch-polyfill.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
+<footer>
 
-    <footer>
-       
-    </footer>
+</footer>
 
 </html>
