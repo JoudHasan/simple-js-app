@@ -86,7 +86,7 @@
   
     function showDetails(item) {
       loadDetails(item).then(function () {
-        showModal(item.name, 'Height: ' + item.height);
+       showModal(item.name, 'Height: ' + item.height, item.imageUrl);
       });
     }
   
