@@ -161,12 +161,6 @@ let pokemonListContainer = document.createElement("div");
 pokemonListContainer.classList.add("pokemon-list");
 document.body.appendChild(pokemonListContainer);
 
-pokemonRepository.add({
-  name: "Squirtle",
-  height: 1.5,
-  types: ["water"],
-});
-
 pokemonRepository.loadList().then(function () {
   pokemonRepository.getAll().forEach(function (pokemon) {
     pokemonRepository.addListItem(pokemon);
